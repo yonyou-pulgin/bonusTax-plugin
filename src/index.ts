@@ -12,7 +12,6 @@ const { t } = field;
 // 通过addDomainList添加请求接口的域名
 basekit.addDomainList(['dev.yygongzi.com']);
 
-basekit.field.name = 33
 basekit.addField({
 	// 定义捷径的i18n语言资源
 	i18n: {
@@ -22,8 +21,17 @@ basekit.addField({
 				salaryBefore: '选择税前工资（月）字段',
 				monthSocialInsurance: '选择个人社保公积金合计（月）字段',
 				monthZxfjkchj: '选择专项附加扣除合计（月）字段',
+        requireDesc: '必选项，需要选择多维表中「年终奖」列',
+        desc: '批量优化年终奖个税，让员工多拿钱',
 			},
-			'en-US': {},
+			'en-US': {
+      	bonusBefore: 'select field of before tax year-end bonus',
+				salaryBefore: 'select field of before tax salary (month)',
+				monthSocialInsurance: 'select field of total personal social security and housing fund (monthly)',
+				monthZxfjkchj: 'select field of total special additional deductions (monthly)',
+        requireDesc: 'required option, you need to select the "year-end bonus" column in the table',
+        desc: 'optimizing year-end bonus and tax, allowing employees to receive more money',
+      },
 			'ja-JP': {},
 		},
 	},
@@ -35,7 +43,7 @@ basekit.addField({
        tooltips: [
         {
           type: 'text',
-          content: '必选项，需要选择多维表中「年终奖」列'
+          content: t('requireDesc')
         },
       ],
 			component: FieldComponent.FieldSelect,
@@ -92,7 +100,7 @@ basekit.addField({
 		},
     {
       key: 'radio',
-      label: '批量优化年终奖个税，让员工多拿钱',
+      label: t('desc'),
       component: FieldComponent.Radio,
       props: {
         defaultValue: "0",
@@ -100,7 +108,7 @@ basekit.addField({
         ]
       },
       validator: {
-				required: true,
+				required: false,
 			},
     },
 	],
