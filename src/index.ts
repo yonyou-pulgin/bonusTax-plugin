@@ -98,19 +98,18 @@ basekit.addField({
 				required: false,
 			},
 		},
-    {
-      key: 'radio',
-      label: t('desc'),
-      component: FieldComponent.Radio,
-      props: {
-        defaultValue: "0",
-        options: [
-        ]
-      },
-      validator: {
-				required: false,
-			},
-    },
+    // {
+    //   key: 'radio',
+    //   label: t('desc'),
+    //   component: FieldComponent.Radio,
+    //   props: {
+    //     defaultValue: 0,
+    //    options: []
+    //   },
+    //   validator: {
+		// 		required: false,
+		// 	},
+    // },
 	],
 	// 定义捷径的返回结果类型
 	resultType: {
