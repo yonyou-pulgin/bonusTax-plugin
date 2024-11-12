@@ -98,18 +98,6 @@ basekit.addField({
 				required: false,
 			},
 		},
-    // {
-    //   key: 'radio',
-    //   label: t('desc'),
-    //   component: FieldComponent.Radio,
-    //   props: {
-    //     defaultValue: 0,
-    //    options: []
-    //   },
-    //   validator: {
-		// 		required: false,
-		// 	},
-    // },
 	],
 	// 定义捷径的返回结果类型
 	resultType: {
@@ -121,35 +109,30 @@ basekit.addField({
 			properties: [
        {
           key: 'bonusInSalary',
-          isGroupByKey: true,
           type: FieldType.Text,
           title: '转入工资发放的年终奖',
-          primary: true,
-          hidden: false,
         },
         {
           key: 'bonusAfter',
           type: FieldType.Text,
           title: '调整后应发的年终奖',
-          hidden: false,
         },
         {
           key: 'salaryTaxAfter',
           type: FieldType.Text,
-          title: '调整后的工资缴税（年） ',
-          hidden: false,
+          title: '调整后的工资缴税（年）',
         },
         {
           key: 'bonusTaxAfter',
           type: FieldType.Text,
           title: '调整后的年终奖繳税',
-          hidden: false,
         },
         {
           key: 'saveTax',
           type: FieldType.Text,
           title: '节省个税',
-          hidden: false,
+          primary: true,
+          isGroupByKey: true
         },
 			],
 		},
