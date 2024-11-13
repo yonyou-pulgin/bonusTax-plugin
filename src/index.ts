@@ -150,7 +150,7 @@ basekit.addField({
 		type: FieldType.Object,
 		extra: {
 			icon: {
-				light: '',
+				light: 'https://lf3-static.bytednsdoc.com/obj/eden-cn/abjayvoz/ljhwZthlaukjlkulzlp/2024H2/more/tax/tax2.png',
 			},
 			properties: [
 				{
